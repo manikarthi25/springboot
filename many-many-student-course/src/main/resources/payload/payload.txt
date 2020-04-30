@@ -1,0 +1,53 @@
+CRUD OPERATION
+
+1. ADD New Locality Information 
+URL : localhost:7777/add
+Method : POST
+Payload : 
+   {
+   "streetName":"RVS Street",
+   "locality":"RVS",
+   "city":"Dindigul",
+   "waterTankList":[
+      {
+         "capacity":12,
+         "tankCleanedDate":"2020-02-11"
+      },
+      {
+         "capacity":78,
+         "tankCleanedDate":"2020-03-14"
+      }
+   ]
+}
+
+2. Search Locality By Id
+URL : localhost:7777/search/3
+Method : GET
+
+3. Search all locality
+URL : localhost:7777/search/all
+Method : GET
+
+4. Update Water Tack
+URL : localhost:7777/update
+Method : PUT
+Payload :
+{
+   "id":3,
+   "streetName":"PSNA Street",
+   "locality":"PSNA",
+   "city":"Madurai",
+   "waterTankList":[
+      {
+      	 "localityId":10,
+         "capacity":24,
+         "tankCleanedDate":"2019-02-11"
+      }
+   ]
+}
+
+6. Delete Locality By id
+URL : localhost:7777/delete/3
+Method : DELETE
+
+   

@@ -1,0 +1,97 @@
+Student
+1. Add Student
+URL : localhost:7777/addstudent
+Method : POST
+Payload : 
+{
+   "studentName":"Raj",
+   "courseList":[
+      {
+         "courseName":"C",
+         "courseDuration":"1 Days"
+      },
+      {
+         "courseName":"C++",
+         "courseDuration":"2 hours"
+      }
+   ]
+}
+
+2. Search By Student Id
+URL : localhost:7777/searchstudent/15
+Method : GET
+
+3. Search Student ALL
+URL : localhost:7777/searchstudent/all
+Method : GET
+
+4. Update Student
+URL : localhost:7777/updatestudent
+Method : PUT
+Payload : 
+{
+   "id":15,
+   "studentName":"Kannan",
+   "courseList":[
+      {
+         "courseName":"PHP",
+         "courseDuration":"100 Days"
+      },
+      {
+         "courseName":"DOT NET",
+         "courseDuration":"20 hours"
+      }
+   ]
+}
+
+5. Delete by Stsudent ID
+URL : localhost:7777/deletestudent/21
+Method : DELETE
+
+Course
+1. Add Course
+URL : localhost:7777/addcourse
+Method : POST
+Payload :
+{
+   "courseName":"Hibernate",
+   "courseDuration":"5 Days",
+   "studentList":[
+      {
+         "studentName":"Raji"
+      },
+      {
+         "studentName":"Kiruthi"
+      }
+   ]
+}
+
+2. Search Course BY ID
+URL : localhost:7777/searchcourse/13
+Method: GET
+
+3. Search All Course
+URL : localhost:7777/searchcourse/all
+Method : GET
+
+4.Update Course
+URL : localhost:7777/updatecourse
+Method :PUT
+Payload:
+{
+   "id":13,
+   "courseName":"Cloud",
+   "courseDuration":"50 Days",
+   "studentList":[
+      {
+         "studentName":"Karthi"
+      },
+      {
+         "studentName":"Mohith"
+      }
+   ]
+}
+
+5. Delete by course id
+URL : localhost:7777/deletecourse/13
+Method : Delete
