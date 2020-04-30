@@ -61,13 +61,7 @@ public class LocalityWaterTanksDAO {
 	}
 
 	public List<Locality> getWaterTankDetails() {
-		List<LocalityEntity> localityEntityList = localityRepository.findAll();
-		List<Locality> localityList = new ArrayList<>();
-		for (LocalityEntity localityEnty : localityEntityList) {
-			Locality local = getLocalityFromEntity(localityEnty);
-			localityList.add(local);
-		}
-		return localityList;
+		return getAllLocalityDetails();
 	}
 
 	public List<Locality> updateLocality(Locality locality) {
@@ -91,7 +85,7 @@ public class LocalityWaterTanksDAO {
 
 			localityRepository.saveAndFlush(localityEntity);
 		}
-		return getAllLocality();
+		return getAllLocalityDetails();
 	}
 
 	public List<Locality> deleteLocalityById(Integer id) {
@@ -99,7 +93,7 @@ public class LocalityWaterTanksDAO {
 		if (optLocalityEntity.isPresent()) {
 			localityRepository.deleteById(id);
 		}
-		return getAllLocality();
+		return getAllLocalityDetails();
 	}
 
 	private Locality getLocalityFromEntity(LocalityEntity localityEntity) {
@@ -120,7 +114,7 @@ public class LocalityWaterTanksDAO {
 		return locality;
 	}
 
-	private List<Locality> getAllLocality() {
+	private List<Locality> getAllLocalityDetails() {
 		List<LocalityEntity> localityEntityList = localityRepository.findAll();
 		List<Locality> localityList = new ArrayList<>();
 		for (LocalityEntity localityEnty : localityEntityList) {
